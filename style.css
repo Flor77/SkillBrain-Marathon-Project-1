@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Fira+Sans:wght@600&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3e692;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+}
+
+.slide {
+  flex: 1;
+  height: 80vh;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+.slide h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
